@@ -7,9 +7,9 @@ const Drawer = createDrawerNavigator();
 
 export default function MainScreen() {
     return (
-<Drawer.Navigator>
-<Drawer.Screen name='Home' component={'Home'} options={{headerShown: TabRouter}} />
-</Drawer.Navigator>
+        <View>
+            <Text>Yyooyodhdhd</Text>
+        </View>
     )
 }
 
