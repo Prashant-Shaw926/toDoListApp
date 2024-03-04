@@ -1,28 +1,33 @@
 import { View, Text, StyleSheet, Image, Pressable } from 'react-native'
 import React from 'react'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import Home from './Home'
+import Setting from './Setting'
+import ManageYourTask from './ManageYourTask'
 const logoImg = require('/Users/Prashant/projects/RNFirstProject/RNNewProject/assets/icons/sort.png')
 const profileImg = require('/Users/Prashant/projects/RNFirstProject/RNNewProject/assets/img/pp.png')
 const midSectionImg = require('/Users/Prashant/projects/RNFirstProject/RNNewProject/assets/img/checklist.png')
 
+const Tab = createBottomTabNavigator();
 
 export default function MainScreen({ navigation }) {
     return (
-        <View style={styles.mainContainer}>
-            <View style={styles.navBar}>
-                <View><Image style={styles.logoI} source={logoImg} /></View>
-                <View><Text style={styles.txt}>Home</Text></View>
-                <View><Pressable onPress={() => navigation.navigate('Splash')}><Image style={styles.profile} source={profileImg} /></Pressable></View>
-            </View>
-            <View style={styles.midSection}>
-                <View>
-                    <Image style={styles.midSectionImgS} source={midSectionImg} />
+            <View style={styles.mainContainer}>
+                <View style={styles.navBar}>
+                    <View><Image style={styles.logoI} source={logoImg} /></View>
+                    <View><Text style={styles.txt}>Home</Text></View>
+                    <View><Pressable onPress={() => navigation.navigate('Splash')}><Image style={styles.profile} source={profileImg} /></Pressable></View>
                 </View>
-                <View style={styles.midSectionTxtBox}>
-                    <Text style={styles.midSectionTxt1}>What do you want to do today?</Text>
-                    <Text style={styles.midSectionTxt2}>Tap + to add your tasks</Text>
+                <View style={styles.midSection}>
+                    <View>
+                        <Image style={styles.midSectionImgS} source={midSectionImg} />
+                    </View>
+                    <View style={styles.midSectionTxtBox}>
+                        <Text style={styles.midSectionTxt1}>What do you want to do today?</Text>
+                        <Text style={styles.midSectionTxt2}>Tap + to add your tasks</Text>
+                    </View>
                 </View>
             </View>
-        </View>
     )
 }
 

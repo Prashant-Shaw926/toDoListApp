@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, Pressable, Image } from 'react-native'
 import React from 'react'
 import MainScreen from './MainScreen';
+import BottomNavigator from '../BottomNavigator'
 
 const midSectionImg = require('/Users/Prashant/projects/RNFirstProject/RNNewProject/assets/img/oyt-Img.png')
 
@@ -28,7 +29,7 @@ export default function ManageYourTask({navigation}) {
       </View>
       <View style={styles.footer}>
         <View><Pressable onPress={()=>navigation.navigate('ManageYourTask')}><Text style={[styles.backTxt, styles.commonText]}>BACK</Text></Pressable></View>
-        <View><Pressable onPress={()=>navigation.navigate('MainScreen')} style={styles.nextBtn}><Text style={styles.nextTxt}>GET STARTED</Text></Pressable></View>
+        <View><Pressable onPress={()=>navigation.navigate('BottomNavigator')} style={styles.nextBtn}><Text style={styles.nextTxt}>GET STARTED</Text></Pressable></View>
       </View>
     </View>
   )
