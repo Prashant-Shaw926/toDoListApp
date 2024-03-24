@@ -4,7 +4,7 @@ import MainScreen from './MainScreen';
 
 const midSectionImg = require('/Users/Prashant/projects/RNFirstProject/RNNewProject/assets/img/cdr-Img.png')
 
-export default function ManageYourTask({navigation}) {
+export default function CreateDailyRoutine({navigation}) {
   return (
     <View style={styles.MYTContainer}>
       <View>
@@ -27,8 +27,8 @@ export default function ManageYourTask({navigation}) {
         </View>
       </View>
       <View style={styles.footer}>
-        <View><Pressable onPress={()=>navigation.navigate('ManageYourTask')}><Text style={[styles.backTxt, styles.commonText]}>BACK</Text></Pressable></View>
-        <View><Pressable onPress={()=>navigation.navigate('OrganizeYourTasks')} style={styles.nextBtn}><Text style={styles.nextTxt}>NEXT</Text></Pressable></View>
+        {/* <View><Pressable onPress={()=>navigation.navigate('ManageYourTask')}><Text style={[styles.backTxt, styles.commonText]}>BACK</Text></Pressable></View>
+        <View><Pressable onPress={()=>navigation.navigate('OrganizeYourTasks')} style={styles.nextBtn}><Text style={styles.nextTxt}>NEXT</Text></Pressable></View> */}
       </View>
     </View>
   )

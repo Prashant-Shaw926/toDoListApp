@@ -1,6 +1,5 @@
 import { View, Text, StyleSheet, Pressable, Image } from 'react-native'
 import React from 'react'
-import MainScreen from './MainScreen';
 
 const midSectionImg = require('/Users/Prashant/projects/RNFirstProject/RNNewProject/assets/img/myt-Img.png')
 
@@ -8,7 +7,7 @@ export default function ManageYourTask({navigation}) {
   return (
     <View style={styles.MYTContainer}>
       <View>
-        <Pressable onPress={()=>navigation.navigate('MainScreen')}><Text style={[styles.skipTxt, styles.commonText]}>SKIP</Text></Pressable>
+        <Pressable onPress={() => navigation.navigate('BottomNavigator')}><Text style={[styles.skipTxt, styles.commonText]}>SKIP</Text></Pressable>
       </View>
       <View style={styles.midSection}>
         <View><Image style={styles.midSectionImgS} source={midSectionImg} /></View>
@@ -27,8 +26,8 @@ export default function ManageYourTask({navigation}) {
         </View>
       </View>
       <View style={styles.footer}>
-        <View><Pressable onPress={()=>navigation.navigate('Splash')}><Text style={[styles.backTxt, styles.commonText]}>BACK</Text></Pressable></View>
-        <View><Pressable onPress={()=>navigation.navigate('CreateDailyRoutine')} style={styles.nextBtn}><Text style={styles.nextTxt}>NEXT</Text></Pressable></View>
+        {/* <View><Pressable onPress={() => navigation.navigate('Splash')}><Text style={[styles.backTxt, styles.commonText]}>BACK</Text></Pressable></View> */}
+        {/* <View><Pressable onPress={()=>navigation.navigate('CreateDailyRoutine')} style={styles.nextBtn}><Text style={styles.nextTxt}>NEXT</Text></Pressable></View> */}
       </View>
     </View>
   )

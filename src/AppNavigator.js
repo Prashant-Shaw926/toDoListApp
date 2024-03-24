@@ -8,21 +8,28 @@ import MainScreen from './screens/MainScreen';
 import CreateDailyRoutine from './screens/CreateDailyRoutine'
 import OrganizeYourTasks from './screens/OrganizeYourTasks'
 import BottomNavigator from './BottomNavigator';
+import Profile from './screens/Profile';
+import OnBoarding from './OnBoarding'
 
 
 const Stack = createStackNavigator();
 
+
 export default function AppNavigator() {
     return (
-        <NavigationContainer>
-            <Stack.Navigator>
-                <Stack.Screen name='Splash' component={Splash} options={{ headerShown: false }} />
-                <Stack.Screen name='ManageYourTask' component={ManageYourTask} options={{ headerShown: false }} />
-                <Stack.Screen name='CreateDailyRoutine' component={CreateDailyRoutine} options={{ headerShown: false }} />
-                <Stack.Screen name='OrganizeYourTasks' component={OrganizeYourTasks} options={{ headerShown: false }} />
-                <Stack.Screen name='MainScreen' component={MainScreen} options={{ headerShown: false }} />
-                <Stack.Screen name='BottomNavigator' component={BottomNavigator} options={{ headerShown: false }} />
-            </Stack.Navigator>
-        </NavigationContainer>
+
+            <NavigationContainer>
+                <Stack.Navigator>
+                    <Stack.Screen name='Splash' component={Splash} options={{ headerShown: false }} />
+                    <Stack.Screen name='Profile' component={Profile} options={{ headerShown: false }} />
+                    {/* <Stack.Screen name='ManageYourTask' component={ManageYourTask} options={{ headerShown: false }} />
+                    <Stack.Screen name='CreateDailyRoutine' component={CreateDailyRoutine} options={{ headerShown: false }} />
+                    <Stack.Screen name='OrganizeYourTasks' component={OrganizeYourTasks} options={{ headerShown: false }} /> */}
+                    <Stack.Screen name='MainScreen' component={MainScreen} options={{ headerShown: false }} />
+                    <Stack.Screen name='BottomNavigator' component={BottomNavigator} options={{ headerShown: false }} />
+                    <Stack.Screen name='OnBoarding' component={OnBoarding} options={{ headerShown: false }} />
+                </Stack.Navigator>
+            </NavigationContainer>
+
     )
 }

@@ -7,9 +7,9 @@ export default function Splash({ navigation }) {
 
     useEffect(() => {
         setTimeout(() => {
-            navigation.navigate('ManageYourTask')
+            navigation.navigate('OnBoarding')
         }, 3000)
-    }, [2]);
+    }, []);
 
 
     return (
